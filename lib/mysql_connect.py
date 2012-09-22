@@ -13,25 +13,69 @@ def add_table_venue_meta():
     name VARCHAR(200) ,
     lat DOUBLE ,
     lng DOUBLE ,
-    postCode VARCHAR(20) ,
+    postalCode VARCHAR(20) ,
     city VARCHAR(100) ,
     state VARCHAR(100),
     country VARCHAR(100),
     verified BOOL,
-    checkinCount INT(20),
-    userCount INT(20),
+    checkinsCount INT(20),
+    usersCount INT(20),
     tipCount INT(20),
     url VARCHAR(500),
     likesCount INT(20),
     rating  DOUBLE,
     ratingSignals   INT(20),
     photoCount  INT(20),
-    tipsCount   INT(20),
     PRIMARY KEY(id)
     )   ENGINE InnoDB DEFAULT CHARSET=utf8;
     """
     cursor = connect_to_mysql()
     cursor.execute(sql)
+
+def add_table_venue_photo_4sq():
+    sql = """
+    CREATE TABLE IF NOT EXISTS venue_photo_4sq(
+    venue_id VARCHAR(50) NOT NULL,
+    id VARCHAR(50) NOT NULL,
+    createdAt INT(30),
+    source_name VARCHAR(200),
+    source_url VARCHAR(500), 
+    url VARCHAR(500),
+    user_id INT(20),
+    user_firstName VARCHAR(100),
+    user_lastName VARCHAR(100),
+    user_photo VARCHAR(500),
+    user_gender VARCHAR(20),
+    user_homeCity VARCHAR(100),
+    user_tips INT(20),
+    
+    PRIMARY KEY(id)
+    ) ENGINE InnoDB DEFAULT CHARSET=utf8;
+    """
+    cursor = connect_to_mysql()
+    cursor.execute(sql)
+
+def add_table_venue_tips():
+    sql = """
+    CREATE TABLE IF NOT EXISTS venue_tips(
+    venue_id VARCHAR(50) NOT NULL,
+    id VARCHAR(50) NOT NULL,
+    createdAt INT(30),
+    text TEXT, 
+    likesCount INT(10),
+    user_id INT(20),
+    user_firstName VARCHAR(100),
+    user_lastName VARCHAR(100),
+    user_photo VARCHAR(500),
+    user_gender VARCHAR(20),
+    user_homeCity VARCHAR(100),
+    user_tips INT(20),
+    PRIMARY KEY(id)
+    ) ENGINE InnoDB DEFAULT CHARSET=utf8;
+    """
+    cursor = connect_to_mysql()
+    cursor.execute(sql)
+
 def add_table_daily_digest():
     sql = """
     CREATE TABLE IF NOT EXISTS daily_digest(

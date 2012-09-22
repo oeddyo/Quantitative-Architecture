@@ -10,7 +10,7 @@ add_table_venue_meta()
 
 #print client.users()
 
-#res =  client.venues.search(params={'limit':50,'query': 'plaza', 'near':'New York City', 'categoryId':'4bf58dd8d48988d164941735'})
+res =  client.venues.search(params={'limit':50,'query': 'plaza', 'near':'New York City', 'categoryId':'4bf58dd8d48988d164941735'})
 res = client.venues('40a55d80f964a52020f31ee3')
 
 print res
