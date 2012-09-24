@@ -11,7 +11,7 @@ from lib.mysql_connect import add_table_venue_tips
 
 import foursquare
 import config
-
+import time
 
 class VenueMetaCrawler:
     def __init__(self):
@@ -28,7 +28,7 @@ class VenuePhotoCrawler:
         #venue_photo = self.client.venues.photos( params = {'VENUE_ID':venue_id, 'group':'venue'})
         print venue_id
         print 'here'
-        for offset in range(0, 3000, 200):
+        for offset in range(0, 1000, 200):
             venue_photo = self.client.venues.photos(VENUE_ID = venue_id, params = {'limit':200, 'group':'venue', 'offset':offset})
             save_venue_photo_4sq(venue_photo, venue_id)
 
@@ -48,15 +48,18 @@ def main():
 
     client = foursquare.Foursquare(config.client_id, client_secret=config.client_secret)
     
-    #plazas = client.
-
-    venue_id = '4a0b04dcf964a520ba741fe3'
-    crawler = VenueMetaCrawler()
-    crawler.grab_meta_data(venue_id)
-    crawler = VenuePhotoCrawler()
-    crawler.grab_photo(venue_id)
+    all_plazas = client.venues.search(params={'near':'New York City', 'limit':50, 'intent':'browse', 'radius':5000, 'categoryId':'4bf58dd8d48988d164941735'} )
     
-    crawler = VenueTipsCrawler()
-    crawler.grab_tip(venue_id)
+    cnt = 0
+    for v in all_plazas['venues']:
+        time.sleep(10)
+        venue_id = v['id']
+        print 'progress: %d/%d -> %s'%(cnt, len(all_plazas), v['name'])
+        crawler = VenueMetaCrawler()
+        crawler.grab_meta_data(venue_id)
+        crawler = VenuePhotoCrawler()
+        crawler.grab_photo(venue_id)
+        crawler = VenueTipsCrawler()
+        crawler.grab_tip(venue_id)
 
 main()
