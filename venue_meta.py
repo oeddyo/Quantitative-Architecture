@@ -28,7 +28,7 @@ class VenuePhotoCrawler:
         #venue_photo = self.client.venues.photos( params = {'VENUE_ID':venue_id, 'group':'venue'})
         print venue_id
         print 'here'
-        for offset in range(0, 613, 200):
+        for offset in range(0, 3000, 200):
             venue_photo = self.client.venues.photos(VENUE_ID = venue_id, params = {'limit':200, 'group':'venue', 'offset':offset})
             save_venue_photo_4sq(venue_photo, venue_id)
 
@@ -36,16 +36,21 @@ class VenueTipsCrawler:
     def __init__(self):
         self.client = foursquare.Foursquare(config.client_id, client_secret=config.client_secret)
     def grab_tip(self, venue_id):
-        for offset in range(0,6000,500):
-            venue_tip = self.client.venues.tips(VENUE_ID = venue_id, params = {'limit':500, 'offset':offset} )
+        for offset in range(0,1000,100):
+            print 'now offset is ',offset
+            venue_tip = self.client.venues.tips(VENUE_ID = venue_id, params = {'limit':100, 'offset':offset} )
             save_venue_tip(venue_tip, venue_id)
-
 
 def main():
     add_table_venue_meta()
     add_table_venue_photo_4sq()
     add_table_venue_tips()
-    venue_id = '4dcc0c0e1fc7eca44b1f1ed6'
+
+    client = foursquare.Foursquare(config.client_id, client_secret=config.client_secret)
+    
+    #plazas = client.
+
+    venue_id = '4a0b04dcf964a520ba741fe3'
     crawler = VenueMetaCrawler()
     crawler.grab_meta_data(venue_id)
     crawler = VenuePhotoCrawler()
