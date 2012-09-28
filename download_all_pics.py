@@ -23,7 +23,7 @@ def downloader():
             try:
                 pic_count+=1
                 print 'working on %s\t %d'%(_url, pic_count)
-                out_path = '/Users/eddiexie/work/quan_arch/pics/'+k+'/'+str(pic_count)+'jpg'
+                out_path = '/Users/eddiexie/work/quan_arch/pics/'+k+'/'+str(pic_count)+'.jpg'
                 urlretrieve(_url, out_path)
             except:
                 continue
