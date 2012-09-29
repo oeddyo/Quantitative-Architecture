@@ -76,6 +76,28 @@ def add_table_venue_tips():
     cursor = connect_to_mysql()
     cursor.execute(sql)
 
+def add_table_venue_photo_instagram():
+    sql = """
+    CREATE TABLE IF NOT EXISTS venue_photo_instagram(
+    foursquare_venue_id VARCHAR(50) NOT NULL,
+    instagram_venue_id INT(20) NOT NULL,
+    id VARCHAR(50) NOT NULL,
+    filter VARCHAR(100),
+    tags TEXT,
+    comments TEXT,
+    likes_count INT(10),
+    link VARCHAR(500),
+    username VARCHAR(100),
+    profile_picture VARCHAR(500),
+    standard_resolution VARCHAR(200),
+    created_time DATETIME,
+    PRIMARY KEY(id)
+    ) ENGINE InnoDB DEFAULT CHARSET=utf8;
+    """
+    cursor = connect_to_mysql()
+    cursor.execute(sql)
+
+
 def add_table_daily_digest():
     sql = """
     CREATE TABLE IF NOT EXISTS daily_digest(

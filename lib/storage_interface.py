@@ -3,7 +3,7 @@
 """
 
 import mysql_connect
-
+import json
 
 def save_venue_meta(venue):
     """Save meta data for a single venue into mysql (table venue_meta)
@@ -61,6 +61,57 @@ def save_venue_photo_4sq(photo, venue_id):
         user_tips = pic['user']['tips'].get('count',None)
         cursor.execute("REPLACE INTO venue_photo_4sq (venue_id, id, createdAt, source_name, source_url, url, user_id, user_firstName, user_lastName, user_photo, user_gender, user_homeCity, user_tips) values (%s" + ",%s"*12+")", (venue_id, id, createdAt, source_name, source_url, url ,user_id, user_firstName, user_lastName, user_photo, user_gender, user_homeCity, user_tips) )
 
+
+def save_photo_instagram(photos, foursquare_venue_id, instagram_venue_id):
+    """Save photos from instagram into table venue_photo_instagram
+    See table venue_photo_instagram for columns detail.
+    Notice, this table structure is different from venue_photo_4sq.
+    Keyword arguments
+    photos - photos from instagram
+    venue_id venue id for this venue. This is used as a foreign key"""
+    cursor = mysql_connect.connect_to_mysql()
+    for photo in photos:
+        _id = photo.id
+        _filter = photo.filter
+        _tags = []
+        if 'tags' in dir(photo):
+            for t in photo.tags:
+                _tags.append(t.name)
+            #_tags = photo.tags
+        if len(_tags)==0:
+            _tags = None
+        else:
+            _tags = json.dumps(_tags)
+        _comments = []
+        for c in photo.comments:
+            _comments.append( (c.user.username, c.text) )
+        if len(_comments)==0:
+            _comments = None
+        else:
+            _comments = json.dumps(_comments)
+            #print _comments
+        if len(photo.likes)==0:
+            _likes_count = 0
+        else:
+            _likes_count = len(photo.likes)
+        _link = photo.link
+        _username = photo.user.username
+        _profile_picture = photo.user.profile_picture
+        _standard_resolution = photo.images['standard_resolution']
+        _created_time = photo.created_time
+        #print _id, _filter, _tags, _comments, _likes_count, _link, _username, _profile_picture, _standard_resolution, _created_time
+        cursor.execute("REPLACE INTO venue_photo_instagram (foursquare_venue_id, instagram_venue_id, id, filter, tags, comments, likes_count, link, username, profile_picture, standard_resolution, created_time) values(%s" + ",%s"*11 + ")",(foursquare_venue_id,instagram_venue_id, _id, _filter, _tags, _comments, _likes_count, _link, _username, _profile_picture, _standard_resolution, _created_time) )
+
+def get_all_foursquare_ids():
+    sql = """
+    select name,id from venue_meta
+    """
+    cursor = mysql_connect.connect_to_mysql()
+    cursor.execute(sql)
+    venue_id_name_dic = {}
+    for r in cursor.fetchall():
+        venue_id_name_dic[r['id']] = r['name']
+    return venue_id_name_dic
 
 def save_venue_tip(tips, venue_id):
     """Save tips from 4sq into table venue_tips.
