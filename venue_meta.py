@@ -10,6 +10,7 @@ from lib.storage_interface import save_venue_tip
 from lib.storage_interface import save_photo_instagram
 
 from lib.storage_interface import get_all_foursquare_ids
+from lib.storage_interface import get_all_photo_fetched_venue_id_instagram
 
 from lib.mysql_connect import add_table_venue_meta
 from lib.mysql_connect import add_table_venue_photo_4sq
@@ -55,10 +56,12 @@ class VenuePhotoCrawlerInstagram:
         for media in popular_media:
             print media.caption.text
     def grab_photos(self, foursquare_id):
-        instagram_id = self.fetch_instagram_id(foursquare_id)
-        #photos, p_next = self.client.location_recent_media(count=500, location_id = id, as_generator=True)
-        gen = self.client.location_recent_media(count=200, location_id = instagram_id, as_generator=True, max_pages=500)#, return_json=True)
-        page_cnt = 0
+        try:
+            instagram_id = self.fetch_instagram_id(foursquare_id)
+            gen = self.client.location_recent_media(count=200, location_id = instagram_id, as_generator=True, max_pages=500)#, return_json=True)
+            page_cnt = 0
+        except:
+            return 
         for page in gen:
             save_photo_instagram(page[0], foursquare_id, instagram_id)    
             print 'fetching page',page_cnt
@@ -92,7 +95,9 @@ def instagram_test():
     add_table_venue_photo_instagram()
     crawler = VenuePhotoCrawlerInstagram()
     foursquare_ids = get_all_foursquare_ids()
+    fetched_ids = get_all_photo_fetched_venue_id_instagram()
     for foursquare_id in foursquare_ids.keys():
-        print foursquare_id, foursquare_ids[foursquare_id]
-        crawler.grab_photos(foursquare_id)
+        if foursquare_id not in fetched_ids:
+            print foursquare_id, foursquare_ids[foursquare_id]
+            crawler.grab_photos(foursquare_id)
 instagram_test()

@@ -3,6 +3,7 @@
 """
 
 import mysql_connect
+import datetime
 import json
 
 def save_venue_meta(venue):
@@ -102,6 +103,19 @@ def save_photo_instagram(photos, foursquare_venue_id, instagram_venue_id):
         #print _id, _filter, _tags, _comments, _likes_count, _link, _username, _profile_picture, _standard_resolution, _created_time
         cursor.execute("REPLACE INTO venue_photo_instagram (foursquare_venue_id, instagram_venue_id, id, filter, tags, comments, likes_count, link, username, profile_picture, standard_resolution, created_time) values(%s" + ",%s"*11 + ")",(foursquare_venue_id,instagram_venue_id, _id, _filter, _tags, _comments, _likes_count, _link, _username, _profile_picture, _standard_resolution, _created_time) )
 
+
+def save_venue_stats(venue_dic, foursquare_id):
+    venue_dic = venue_dic['venue']
+    checkinsCount = venue_dic['stats'].get('checkinsCount', None)
+    usersCount = venue_dic['stats'].get('usersCount',None)
+    tipCount = venue_dic['stats'].get('tipCount',None)
+    photoCount = venue_dic['photos'].get('count',None)
+    now_date = datetime.datetime.now()
+    print now_date
+    cursor = mysql_connect.connect_to_mysql()
+    cursor.execute("INSERT INTO venue_stats (id, checkinsCount, usersCount, tipCount, photoCount , time) values (%s, %s, %s, %s, %s, %s) ", (foursquare_id, checkinsCount, usersCount, tipCount, photoCount, now_date) )
+
+
 def get_all_foursquare_ids():
     sql = """
     select name,id from venue_meta
@@ -112,6 +126,17 @@ def get_all_foursquare_ids():
     for r in cursor.fetchall():
         venue_id_name_dic[r['id']] = r['name']
     return venue_id_name_dic
+
+def get_all_photo_fetched_venue_id_instagram():
+    sql = """
+    select distinct foursquare_venue_id from venue_photo_instagram;
+    """
+    cursor = mysql_connect.connect_to_mysql()
+    cursor.execute(sql)
+    ids = set()
+    for r in cursor.fetchall():
+        ids.add(r['foursquare_venue_id'])
+    return ids
 
 def save_venue_tip(tips, venue_id):
     """Save tips from 4sq into table venue_tips.
