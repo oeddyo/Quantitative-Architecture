@@ -115,7 +115,6 @@ def save_venue_stats(venue_dic, foursquare_id):
     cursor = mysql_connect.connect_to_mysql()
     cursor.execute("INSERT INTO venue_stats (id, checkinsCount, usersCount, tipCount, photoCount , time) values (%s, %s, %s, %s, %s, %s) ", (foursquare_id, checkinsCount, usersCount, tipCount, photoCount, now_date) )
 
-
 def get_all_foursquare_ids():
     sql = """
     select name,id from venue_meta
@@ -126,6 +125,14 @@ def get_all_foursquare_ids():
     for r in cursor.fetchall():
         venue_id_name_dic[r['id']] = r['name']
     return venue_id_name_dic
+
+def get_all_stats():
+    sql = """
+    select * from venue_stats;
+    """
+    cursor = mysql_connect.connect_to_mysql()
+    cursor.execute(sql)
+    return cursor.fetchall()
 
 def get_all_photo_fetched_venue_id_instagram():
     sql = """
