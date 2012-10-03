@@ -22,14 +22,14 @@ import time
 
 class VenueMetaCrawler:
     def __init__(self):
-        self.client = foursquare.Foursquare(config.client_id, client_secret=config.client_secret)
+        self.client = foursquare.Foursquare(config.foursquare_client_id, client_secret=config.foursquare_client_secret)
     def grab_meta_data(self, venue_id):
         venue = self.client.venues(venue_id)
         save_venue_meta(venue)
 
 class VenuePhotoCrawlerFoursquare:
     def __init__(self):
-        self.client = foursquare.Foursquare(config.client_id, client_secret=config.client_secret)
+        self.client = foursquare.Foursquare(config.foursquare_client_id, client_secret=config.foursquare_client_secret)
     def grab_photo(self, venue_id):
         for offset in range(0, 1000, 200):
             venue_photo = self.client.venues.photos(VENUE_ID = venue_id, params = {'limit':200, 'group':'venue', 'offset':offset})
@@ -37,7 +37,7 @@ class VenuePhotoCrawlerFoursquare:
 
 class VenueTipsCrawler:
     def __init__(self):
-        self.client = foursquare.Foursquare(config.client_id, client_secret=config.client_secret)
+        self.client = foursquare.Foursquare(config.foursquare_client_id, client_secret=config.foursquare_client_secret)
     def grab_tip(self, venue_id):
         for offset in range(0,1000,100):
             print 'now offset is ',offset
@@ -73,7 +73,7 @@ def main():
     add_table_venue_photo_4sq()
     add_table_venue_tips()
 
-    client = foursquare.Foursquare(config.client_id, client_secret=config.client_secret)
+    client = foursquare.Foursquare(config.foursquare_client_id, client_secret=config.foursquare_client_secret)
     
     all_plazas = client.venues.search(params={'near':'New York City', 'limit':50, 'intent':'browse', 'radius':5000, 'categoryId':'4bf58dd8d48988d164941735'} )
     
@@ -89,7 +89,7 @@ def main():
         crawler = VenueTipsCrawler()
         crawler.grab_tip(venue_id)
 
-#main()
+main()
 
 def instagram_test():
     add_table_venue_photo_instagram()

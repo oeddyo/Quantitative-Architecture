@@ -32,7 +32,7 @@ def export_temporal_data(time_window, start_time, end_time):
     time_list.append('Plaza/Time')
     while cur_time > start_time and cur_time <= end_time:
         print cur_time
-        time_list.append(cur_time)
+        time_list.append(cur_time.hour)
         for id in venue_dic.keys():
             sql = "select * from venue_stats where id =  '" + id + "' and time between '" + str(cur_time) + "' and '" + str(cur_time+time_window) +"'"
             cursor = connect_to_mysql()
@@ -61,6 +61,6 @@ def main():
     #export_temporal_data('week')
     #export_temporal_data('day')
     start_time = datetime.datetime(2012,9,30,20,00,00)
-    end_time = datetime.datetime(2012,10,02,23,00,00)
+    end_time = datetime.datetime(2012,10,03,11,00,00)
     export_temporal_data('hour', start_time, end_time)
 main()
