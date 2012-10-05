@@ -2,40 +2,31 @@
 # -*- coding: utf8 -*-
 
 import cherrypy
-import query
+import foursquare
+import config
 import json
-from lib.query_fetch_data import get_daily_digest
-from lib.query_fetch_data import delete_daily_digest
-from lib.query_fetch_data import like_daily_digest
-from lib.query_fetch_data import unlike_daily_digest
-from lib.query_fetch_data import get_history_scores
-from pytz import timezone
-import pytz
-import datetime
-
-#chart
-from graphy.backends import google_chart_api
 
 class Root:
     def __init__(self):
-        #self.query_handler = query.Query()
         pass
     def return_none(self):
         return None
     return_none.exposed = True
     
+    def search_venue(self):
+        client = foursquare.Foursquare(config.foursquare_client_id, client_secret=config.foursquare_client_secret)
+        all_plazas = client.venues.search(params={'near':'New York City', 'limit':50, 'intent':'browse', 'radius':5000, 'categoryId':'4bf58dd8d48988d164941735'} )
+        return json.dumps(all_plazas['venues'])
+    search_venue.exposed = True
     def get_history(self, name):
         time_array, score_array= get_history_scores(name)
         chart = google_chart_api.LineChart(score_array)
         chart.bottom.labels = time_array
-    
         chart.left.min = 0
         chart.left.max = 1
-        
         chart.left.labels = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]
         chart.left.label_positions = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]
         return chart.display.Img(500, 250)
-    
     get_history.exposed = True
 
     def search(self, keyword = None):

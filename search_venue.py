@@ -28,7 +28,6 @@ class VenueSearcher:
         search_results = client.venues.search(params={'near':'New York City', 'limit':50, 'intent':'browse', 'radius':5000, 'categoryId':'4bf58dd8d48988d164941735'})
 
 
-
 class VenuePhotoCrawlerFoursquare:
     def __init__(self):
         self.client = foursquare.Foursquare(config.foursquare_client_id, client_secret=config.foursquare_client_secret)
