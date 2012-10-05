@@ -13,11 +13,15 @@ class Root:
         return None
     return_none.exposed = True
     
-    def search_venue(self):
+    #def search_venue(self, lon=None, lat=None, near=None, query=None, category=None, radius=None):
+    def search_venue(self, **params):
         client = foursquare.Foursquare(config.foursquare_client_id, client_secret=config.foursquare_client_secret)
-        all_plazas = client.venues.search(params={'near':'New York City', 'limit':50, 'intent':'browse', 'radius':5000, 'categoryId':'4bf58dd8d48988d164941735'} )
+        print params
+        all_plazas = client.venues.search(params={'query':'shfjksdlfjsdklfj', 'near':'New York City', 'limit':50, 'intent':'browse', 'radius':5000, 'categoryId':'4bf58dd8d48988d164941735'})
         return json.dumps(all_plazas['venues'])
     search_venue.exposed = True
+    
+
     def get_history(self, name):
         time_array, score_array= get_history_scores(name)
         chart = google_chart_api.LineChart(score_array)

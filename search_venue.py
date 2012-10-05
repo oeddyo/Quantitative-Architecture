@@ -26,7 +26,7 @@ class VenueSearcher:
     def search(lon=None, lat=None, near=None,radius=None, query=None, section=None):
         params = {}
         search_results = client.venues.search(params={'near':'New York City', 'limit':50, 'intent':'browse', 'radius':5000, 'categoryId':'4bf58dd8d48988d164941735'})
-
+    
 
 class VenuePhotoCrawlerFoursquare:
     def __init__(self):
