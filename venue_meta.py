@@ -26,6 +26,7 @@ class VenueMetaCrawler:
     def grab_meta_data(self, venue_id):
         venue = self.client.venues(venue_id)
         save_venue_meta(venue)
+        return venue
 
 class VenuePhotoCrawlerFoursquare:
     def __init__(self):
@@ -89,7 +90,7 @@ def main():
         crawler = VenueTipsCrawler()
         crawler.grab_tip(venue_id)
 
-main()
+#main()
 
 def instagram_test():
     add_table_venue_photo_instagram()
@@ -100,4 +101,4 @@ def instagram_test():
         if foursquare_id not in fetched_ids:
             print foursquare_id, foursquare_ids[foursquare_id]
             crawler.grab_photos(foursquare_id)
-instagram_test()
+#instagram_test()

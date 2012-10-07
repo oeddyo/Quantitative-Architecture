@@ -11,7 +11,7 @@ def save_venue_meta(venue):
 See table 'venue_meta' for details of fields
 Keyword arguments
 venue - Venue object """
-    print venue['venue'].keys()
+    #print venue['venue'].keys()
     venue_dic = venue['venue']
     id = venue_dic['id']
     name = venue_dic.get('name',None)
