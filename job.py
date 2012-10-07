@@ -16,11 +16,12 @@ class Job():
         for id in self.venue_ids:
             self.venue_count += 1
             self.status = 'Fetching meta data for venue id = '+str(id)
-            #_meta_crawler.grab_meta_data(id)
-            sleep(1)
-            self.status = 'Fetching foursquare photo data for venue id = ' +str(id)
+            _meta_crawler.grab_meta_data(id)
+            #sleep(1)
+            #self.status = 'Fetching foursquare photo data for venue id = ' +str(id)
             #_foursqaure_photo_crawler.grab_photo(id)
-            sleep(1)
+            #sleep(1)
+        self.status = 'Finished'
         downloading_locker.clear() 
         return "job done"
      

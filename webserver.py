@@ -10,13 +10,17 @@ import Queue
 from job import Job
 import threading
 from threading import Thread
+import time
+from lib.mysql_connect import add_table_venue_meta
+from lib.mysql_connect import add_table_venue_photo_4sq
 
-import sched, time
 
 class Root:
     def __init__(self):
         self.jobs = {}
         self.next_job_id = 0
+        add_table_venue_meta()
+        add_table_venue_photo_4sq()
         self.downloading = threading.Event()
         t = Thread(target = self.infinit_consume)
         t.setDaemon(True)
@@ -26,7 +30,6 @@ class Root:
             print 'in infinite loop, try to consume'
             self.consume()
             time.sleep(5)
-    
     def return_none(self):
         return None
     return_none.exposed = True
@@ -52,12 +55,16 @@ class Root:
                 t = Thread(target = job.submit, args=(self.downloading,))
                 t.start()
  
-    def submit_job(self):
-        client = foursquare.Foursquare(config.foursquare_client_id, client_secret=config.foursquare_client_secret)
-        all_plazas = client.venues.search(params={'near':'New York City', 'limit':50, 'intent':'browse', 'radius':5000, 'categoryId':'4bf58dd8d48988d164941735'} )
-        ids = []
-        for v in all_plazas['venues']:
-            ids.append(v['id'])
+    def submit_job(self, ids_string):
+        if type(ids_string) is not unicode:
+            raise cherrypy.HTTPError(404);
+        ids = ids_string.split(',')
+        ids = [str(id) for id in ids]
+        #client = foursquare.Foursquare(config.foursquare_client_id, client_secret=config.foursquare_client_secret)
+        #all_plazas = client.venues.search(params={'near':'New York City', 'limit':50, 'intent':'browse', 'radius':5000, 'categoryId':'4bf58dd8d48988d164941735'} )
+        #ids = []
+        #for v in all_plazas['venues']:
+        #    ids.append(v['id'])
         job = Job(ids) 
         self.jobs[self.next_job_id] = job
         self.next_job_id += 1

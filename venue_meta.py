@@ -24,7 +24,9 @@ class VenueMetaCrawler:
     def __init__(self):
         self.client = foursquare.Foursquare(config.foursquare_client_id, client_secret=config.foursquare_client_secret)
     def grab_meta_data(self, venue_id):
+        print 'try to grab', venue_id, type(venue_id)
         venue = self.client.venues(venue_id)
+        print venue
         save_venue_meta(venue)
         return venue
 
