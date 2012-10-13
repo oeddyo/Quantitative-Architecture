@@ -104,3 +104,6 @@ def instagram_test():
             print foursquare_id, foursquare_ids[foursquare_id]
             crawler.grab_photos(foursquare_id)
 #instagram_test()
+
+if __name__ == '__main__':
+    instagram_test()
