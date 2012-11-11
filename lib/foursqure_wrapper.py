@@ -34,7 +34,6 @@ if __name__=='__main__':
 
     gen  = download_venue_photo('4b903af5f964a520b77d33e3')
 
-    while gen:
-        print gen.next()
-    
+    for g in gen:
+        print g 
 
