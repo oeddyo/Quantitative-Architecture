@@ -6,7 +6,7 @@ import mysql_connect
 import datetime
 import json
 
-def save_venue_meta(venue):
+def save_venue_meta(venue, table):
     """Save meta data for a single venue into mysql (table venue_meta)
 See table 'venue_meta' for details of fields
 Keyword arguments
@@ -38,8 +38,7 @@ venue - Venue object """
     photoCount = venue_dic['photos'].get('count',None)
     tmp_list = [id, name, lat, lng, postalCode, city, state, country, verified, checkinsCount, usersCount, tipCount, url, likesCount, rating, ratingSignals, photoCount]
     cursor = mysql_connect.connect_to_mysql()
-    cursor.execute("REPLACE INTO venue_meta (id, name, lat, lng, categoriesID, categoriesName, postalCode, city, state, country, verified, checkinsCount, usersCount, tipCount, url, likesCount, rating, ratingSignals, photoCount) values (%s" + ",%s"*18 + ")", (id, name, lat, lng, categoriesID, categoriesName, postalCode, city, state, country, verified, checkinsCount, usersCount, tipCount, url, likesCount, rating, ratingSignals, photoCount) )
-    #cursor.execute(sql)
+    cursor.execute("REPLACE INTO "+table+" (id, name, lat, lng, categoriesID, categoriesName, postalCode, city, state, country, verified, checkinsCount, usersCount, tipCount, url, likesCount, rating, ratingSignals, photoCount) values (%s" + ",%s"*18 + ")", (id, name, lat, lng, categoriesID, categoriesName, postalCode, city, state, country, verified, checkinsCount, usersCount, tipCount, url, likesCount, rating, ratingSignals, photoCount) )
 
 def save_venue_photo_4sq(photo, venue_id):
     """Save photos from 4sq into table venue_photo_4sq
