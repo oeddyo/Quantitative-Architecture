@@ -65,13 +65,14 @@ def save_venue_photo_4sq(photo, venue_id):
         cursor.execute("REPLACE INTO venue_photo_4sq (venue_id, id, createdAt, source_name, source_url, url, user_id, user_firstName, user_lastName, user_photo, user_gender, user_homeCity, user_tips) values (%s" + ",%s"*12+")", (venue_id, id, createdAt, source_name, source_url, url ,user_id, user_firstName, user_lastName, user_photo, user_gender, user_homeCity, user_tips) )
 
 
-def save_photo_instagram(photos, foursquare_venue_id, instagram_venue_id):
+def save_photo_instagram(photos, foursquare_venue_id, instagram_venue_id, table):
     """Save photos from instagram into table venue_photo_instagram
     See table venue_photo_instagram for columns detail.
     Notice, this table structure is different from venue_photo_4sq.
     Keyword arguments
     photos - photos from instagram
-    venue_id venue id for this venue. This is used as a foreign key"""
+    venue_id venue id for this venue. This is used as a foreign key
+    table - the table you want to save to"""
     cursor = mysql_connect.connect_to_mysql()
     for photo in photos:
         _id = photo.id
@@ -103,7 +104,7 @@ def save_photo_instagram(photos, foursquare_venue_id, instagram_venue_id):
         _standard_resolution = photo.images['standard_resolution']
         _created_time = photo.created_time
         #print _id, _filter, _tags, _comments, _likes_count, _link, _username, _profile_picture, _standard_resolution, _created_time
-        cursor.execute("REPLACE INTO venue_photo_instagram (foursquare_venue_id, instagram_venue_id, id, filter, tags, comments, likes_count, link, username, profile_picture, standard_resolution, created_time) values(%s" + ",%s"*11 + ")",(foursquare_venue_id,instagram_venue_id, _id, _filter, _tags, _comments, _likes_count, _link, _username, _profile_picture, _standard_resolution, _created_time) )
+        cursor.execute("REPLACE INTO "+table+" (foursquare_venue_id, instagram_venue_id, id, filter, tags, comments, likes_count, link, username, profile_picture, standard_resolution, created_time) values(%s" + ",%s"*11 + ")",(foursquare_venue_id,instagram_venue_id, _id, _filter, _tags, _comments, _likes_count, _link, _username, _profile_picture, _standard_resolution, _created_time) )
 
 
 def save_venue_stats(venue_dic, foursquare_id):

@@ -2,25 +2,29 @@
     For a venue id, grab all it's meta data
 """
 from instagram.client import InstagramAPI
-import foursquare
-
-
-from lib.storage_interface import get_all_foursquare_ids
-from lib.storage_interface import get_all_photo_fetched_venue_id_instagram
-
-from lib.mysql_connect import add_table_venue_meta
-from lib.mysql_connect import add_table_venue_photo_4sq
-from lib.mysql_connect import add_table_venue_tips
-from lib.mysql_connect import add_table_venue_photo_instagram
-
 import config
 import time
 
 def default_client():
-    self.client = InstagramAPI(client_id = config.instagram_client_id, client_secret = config.instagram_client_secret)
+    client = InstagramAPI(client_id = config.instagram_client_id, client_secret = config.instagram_client_secret)
+    return client
+def download_instagram_photos( venue_id, start_timestamp, end_timestamp, client = default_client()):
+    """
+    Download instagram photo for a foursquare veneu. This venue dosn't necessarily exist on instagra. 
+    Need to fire a search on instagram API to find the instagram id first, and then do download.
+    Parameters:
+    client - connect instagram api
+    venue_id - foursquare v2 id
+    start_date - start date. Default would be infinity
+    end_date - end date. Default would be today
+    """
+    instagram_id = client.location_search(foursquare_v2_id = venue_id)
+    instagram_id = instagram_id[0].id
+    print 'instagram id ', instagram_id
+    gen = client.location_recent_media(count = 200, location_id = instagram_id,  max_pages=500, min_timestamp=start_timestamp, max_timestamp=end_timestamp, as_generator = True)
+    for page in gen:
+        yield (page[0], venue_id, instagram_id)
 
-def download_instagram_photos(client = default_client(), venue_id):
-    
 
 class VenuePhotoCrawlerInstagram:
     def __init__(self):
@@ -45,18 +49,8 @@ class VenuePhotoCrawlerInstagram:
             page_cnt+=1
             time.sleep(config.instagram_API_pause)
 
-def instagram_test():
-    add_table_venue_photo_instagram()
-    crawler = VenuePhotoCrawlerInstagram()
-    foursquare_ids = get_all_foursquare_ids()
-    #fetched_ids = get_all_photo_fetched_venue_id_instagram()
-    for foursquare_id in foursquare_ids.keys():
-        """NOTICE THIS IS TO AVOID REPEATING FETCHING"""
-        #if foursquare_id not in fetched_ids:
-        print foursquare_id, foursquare_ids[foursquare_id]
-        crawler.grab_photos(foursquare_id)
-#instagram_test()
-
 if __name__ == '__main__':
-    main()
-    instagram_test()
+    gen = download_instagram_photos(venue_id = '3fd66200f964a520d7f11ee3', start_timestamp = 1352153848, end_timestamp = 1352653871)
+
+    for p in gen:
+        print p
