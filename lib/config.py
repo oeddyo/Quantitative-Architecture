@@ -2,8 +2,13 @@ foursquare_client_id = '5H1WEJGWQISLD522T0DNF0SUR4IRUX4TC32EZ4TV4HRRGCVI'
 foursquare_client_secret = 'Z35JF5XW5CIXSZJU0JI2YYFBHAPMG44O3SUBA5OJX2NOPNIL'
 
 
-instagram_client_id = 'a99d5c36cfce4ff78f852f65aff5a5d5'
-instagram_client_secret = '3fb1538b5bab440bb3015d281b38a65f'
+instagram_client_id = '4d9231b411eb4ef69435b40eb83999d6'
+instagram_client_secret = '204c565fa1244437b9034921e034bdd6'
+
+
+#raz's instagram
+#4d9231b411eb4ef69435b40eb83999d6
+#204c565fa1244437b9034921e034bdd6
 
 mysql_username = 'root'
 mysql_password = 'sci'

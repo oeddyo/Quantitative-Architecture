@@ -117,3 +117,271 @@
  [2012-11-11 14:07:15,911]   [DEBUG] (Thread-7  ) Exception msg: list index out of range 
  [2012-11-11 14:07:15,996]   [DEBUG] (Thread-8  ) Exception msg: list index out of range 
  [2012-11-11 14:07:16,163]   [DEBUG] (Thread-8  ) Exception msg: list index out of range 
+ [2012-11-11 15:20:58,506]   [DEBUG] (Thread-5  ) Exception msg: list index out of range 
+ [2012-11-11 15:23:36,215]   [DEBUG] (Thread-5  ) Exception msg: list index out of range 
+ [2012-11-11 15:23:36,432]   [DEBUG] (Thread-5  ) Exception msg: list index out of range 
+ [2012-11-11 15:24:27,848]   [DEBUG] (Thread-3  ) Exception msg: list index out of range 
+ [2012-11-11 15:26:20,520]   [DEBUG] (Thread-2  ) Exception msg: list index out of range 
+ [2012-11-11 15:26:20,706]   [DEBUG] (Thread-4  ) Exception msg: list index out of range 
+ [2012-11-11 15:26:31,509]   [DEBUG] (Thread-4  ) Exception msg: list index out of range 
+ [2012-11-11 15:26:41,548]   [DEBUG] (Thread-2  ) Exception msg: list index out of range 
+ [2012-11-11 15:26:52,235]   [DEBUG] (Thread-2  ) Exception msg: list index out of range 
+ [2012-11-11 15:27:06,429]   [DEBUG] (Thread-2  ) Exception msg: list index out of range 
+ [2012-11-11 15:27:23,852]   [DEBUG] (Thread-2  ) Exception msg: list index out of range 
+ [2012-11-11 15:27:31,086]   [DEBUG] (Thread-4  ) Exception msg: list index out of range 
+ [2012-11-11 15:27:36,620]   [DEBUG] (Thread-2  ) Exception msg: list index out of range 
+ [2012-11-11 15:28:31,536]   [DEBUG] (Thread-2  ) Exception msg: list index out of range 
+ [2012-11-11 15:28:38,686]   [DEBUG] (Thread-2  ) Exception msg: list index out of range 
+ [2012-11-11 15:28:38,778]   [DEBUG] (Thread-2  ) Exception msg: list index out of range 
+ [2012-11-11 15:28:49,321]   [DEBUG] (Thread-2  ) Exception msg: list index out of range 
+ [2012-11-11 15:28:54,097]   [DEBUG] (Thread-5  ) Exception msg: list index out of range 
+ [2012-11-11 15:28:57,451]   [DEBUG] (Thread-5  ) Exception msg: list index out of range 
+ [2012-11-11 15:28:58,520]   [DEBUG] (Thread-4  ) Exception msg: list index out of range 
+ [2012-11-11 15:28:58,710]   [DEBUG] (Thread-4  ) Exception msg: list index out of range 
+ [2012-11-11 15:29:12,895]   [DEBUG] (Thread-4  ) Exception msg: list index out of range 
+ [2012-11-11 15:29:14,751]   [DEBUG] (Thread-5  ) Exception msg: list index out of range 
+ [2012-11-11 15:29:45,232]   [DEBUG] (Thread-4  ) Exception msg: list index out of range 
+ [2012-11-11 15:29:48,972]   [DEBUG] (Thread-4  ) Exception msg: list index out of range 
+ [2012-11-11 15:30:23,259]   [DEBUG] (Thread-5  ) Exception msg: list index out of range 
+ [2012-11-11 15:30:26,888]   [DEBUG] (Thread-5  ) Exception msg: list index out of range 
+ [2012-11-11 15:31:56,012]   [DEBUG] (Thread-5  ) Exception msg: list index out of range 
+ [2012-11-11 15:31:59,970]   [DEBUG] (Thread-5  ) Exception msg: list index out of range 
+ [2012-11-11 15:32:04,856]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:05,102]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:05,293]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:05,432]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:05,762]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:05,919]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:06,078]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:06,265]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:06,467]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:06,763]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:06,919]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:07,094]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:07,210]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:07,353]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:07,482]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:07,562]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:07,614]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:07,733]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:07,777]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:07,841]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:07,915]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:07,960]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,172]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,174]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,180]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,214]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,240]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,278]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,315]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,393]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,396]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,447]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,470]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,561]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,568]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,598]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,632]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,642]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,684]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,709]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,744]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,834]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,838]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,909]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,924]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:08,968]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,011]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,055]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,092]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,159]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,190]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,191]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,254]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,273]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,319]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,328]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,350]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,359]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,362]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,397]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,417]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,487]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,529]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,555]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,659]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,711]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,722]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,810]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,834]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,889]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,890]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,926]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,928]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,984]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,995]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:09,997]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,038]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,150]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,162]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,290]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,294]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,337]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,343]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,346]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,349]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,383]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,473]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,481]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,486]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,499]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,551]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,626]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,640]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,733]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,742]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,743]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,751]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,833]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,886]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,887]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,895]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,920]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,971]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,984]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:10,990]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,041]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,054]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,080]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,087]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,107]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,125]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,145]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,167]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,203]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,210]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,234]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,255]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,260]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,299]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,330]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,360]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,390]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,391]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,413]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,433]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,438]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,445]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,477]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,510]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,513]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,518]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,552]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,553]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,591]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,600]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,639]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,648]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,667]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,685]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,714]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,717]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,719]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,750]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,769]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,784]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,786]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,808]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,816]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,818]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,822]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,826]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,862]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,873]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,938]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:11,965]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,011]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,034]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,035]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,086]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,169]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,173]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,206]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,209]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,217]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,261]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,263]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,265]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,291]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,299]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,301]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,330]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,384]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,421]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,471]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,483]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,507]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,523]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,566]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,593]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,611]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,620]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,633]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,657]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,692]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,790]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,835]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,908]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,916]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:12,971]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,014]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,020]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,055]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,071]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,086]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,093]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,112]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,145]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,173]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,183]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,227]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,246]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,247]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,251]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,264]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,311]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,336]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,350]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,351]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,361]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,508]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,519]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,531]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,538]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,546]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,620]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,635]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,646]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,651]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,668]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,680]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,682]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,688]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,721]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,728]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,736]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,739]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,748]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,842]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,844]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,901]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,907]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,951]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,964]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:13,984]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:14,048]   [DEBUG] (Thread-5  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:14,049]   [DEBUG] (Thread-4  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:14,056]   [DEBUG] (Thread-1  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:14,058]   [DEBUG] (Thread-3  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 
+ [2012-11-11 15:32:14,078]   [DEBUG] (Thread-2  ) Exception msg: (400) Rate limited-Your client is making too many     request per second 

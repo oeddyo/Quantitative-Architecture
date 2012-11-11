@@ -9,10 +9,11 @@ from lib.multithread import do_multithread_job
 import time
 
 def do_work(venue_id):
-    photos_gen = download_instagram_photos(venue_id, 1, time.time()) 
+    photos_gen = download_instagram_photos(venue_id, time.time()-24*3600*30*12, time.time()) 
     for p in photos_gen:
         (data, venue_id, instagram_id) = p
         save_photo_instagram(data, venue_id, instagram_id, 'plazas_instaphoto')
+        time.sleep(3)
 
 def main():
     sql = "select id from plazas_nyc"
@@ -22,6 +23,6 @@ def main():
     ids = ['4aad5ee2f964a520f25f20e3']
     for r in cursor.fetchall():
         ids.append(r['id'])
-    do_multithread_job(do_work, ids, 10, './log/download_instagram.log')
+    do_multithread_job(do_work, ids, 5, './log/download_instagram.log')
 
 main()
