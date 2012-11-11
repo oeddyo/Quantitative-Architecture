@@ -17,6 +17,9 @@ venue - Venue object """
     name = venue_dic.get('name',None)
     lat = venue_dic['location']['lat']
     lng = venue_dic['location']['lng']
+    categoriesID = venue_dic['categories'][0].get('id', None)
+    categoriesName = venue_dic['categories'][0].get('name', None)
+
     postalCode = venue_dic['location'].get('postalCode',None)
     city = venue_dic['location'].get('city',None)
     state = venue_dic['location'].get('state',None)
@@ -35,7 +38,7 @@ venue - Venue object """
     photoCount = venue_dic['photos'].get('count',None)
     tmp_list = [id, name, lat, lng, postalCode, city, state, country, verified, checkinsCount, usersCount, tipCount, url, likesCount, rating, ratingSignals, photoCount]
     cursor = mysql_connect.connect_to_mysql()
-    cursor.execute("REPLACE INTO venue_meta (id, name, lat, lng, postalCode, city, state, country, verified, checkinsCount, usersCount, tipCount, url, likesCount, rating, ratingSignals, photoCount) values (%s" + ",%s"*16 + ")", (id, name, lat, lng, postalCode, city, state, country, verified, checkinsCount, usersCount, tipCount, url, likesCount, rating, ratingSignals, photoCount) )
+    cursor.execute("REPLACE INTO venue_meta (id, name, lat, lng, categoriesID, categoriesName, postalCode, city, state, country, verified, checkinsCount, usersCount, tipCount, url, likesCount, rating, ratingSignals, photoCount) values (%s" + ",%s"*18 + ")", (id, name, lat, lng, categoriesID, categoriesName, postalCode, city, state, country, verified, checkinsCount, usersCount, tipCount, url, likesCount, rating, ratingSignals, photoCount) )
     #cursor.execute(sql)
 
 def save_venue_photo_4sq(photo, venue_id):

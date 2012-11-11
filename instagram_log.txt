@@ -1,0 +1,2 @@
+/home/eddie/Quantitative-Architecture/lib/mysql_connect.py:98: Warning: Table 'venue_photo_instagram' already exists
+  cursor.execute(sql)

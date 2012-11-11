@@ -13,6 +13,35 @@ def add_table_venue_meta():
     name VARCHAR(200) ,
     lat DOUBLE ,
     lng DOUBLE ,
+    categoriesID VARCHAR(50),
+    categoriesName VARCHAR(50),
+    postalCode VARCHAR(20) ,
+    city VARCHAR(100) ,
+    state VARCHAR(100),
+    country VARCHAR(100),
+    verified BOOL,
+    checkinsCount INT(20),
+    usersCount INT(20),
+    tipCount INT(20),
+    url VARCHAR(500),
+    likesCount INT(20),
+    rating  DOUBLE,
+    ratingSignals   INT(20),
+    photoCount  INT(20),
+    PRIMARY KEY(id)
+    )   ENGINE InnoDB DEFAULT CHARSET=utf8;
+    """
+    cursor = connect_to_mysql()
+    cursor.execute(sql)
+def add_table_manhattan_venues_meta():
+    sql = """
+    CREATE TABLE IF NOT EXISTS manhattan_venues_meta(
+    id VARCHAR(50) NOT NULL,
+    name VARCHAR(200) ,
+    lat DOUBLE ,
+    lng DOUBLE ,
+    categoriesID VARCHAR(50),
+    categoriesName VARCHAR(50),
     postalCode VARCHAR(20) ,
     city VARCHAR(100) ,
     state VARCHAR(100),

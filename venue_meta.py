@@ -58,10 +58,10 @@ class VenuePhotoCrawlerInstagram:
         popular_media = self.client.media_popular(20)
         for media in popular_media:
             print media.caption.text
-    def grab_photos(self, foursquare_id):
+    def grab_photos(self, foursquare_id, max_pages, min_timestamp):
         try:
             instagram_id = self.fetch_instagram_id(foursquare_id)
-            gen = self.client.location_recent_media(count=200, location_id = instagram_id, as_generator=True, max_pages=500)#, return_json=True)
+            gen = self.client.location_recent_media(count=200, location_id = instagram_id, as_generator=True, max_pages=max_pages, min_timestamp = min_timestamp)
             page_cnt = 0
         except:
             return 
@@ -79,7 +79,7 @@ def main():
     client = foursquare.Foursquare(config.foursquare_client_id, client_secret=config.foursquare_client_secret)
     
     all_plazas = client.venues.search(params={'near':'New York City', 'limit':50, 'intent':'browse', 'radius':5000, 'categoryId':'4bf58dd8d48988d164941735'} )
-    
+    print all_plazas 
     cnt = 0
     for v in all_plazas['venues']:
         time.sleep(10)
@@ -92,18 +92,19 @@ def main():
         crawler = VenueTipsCrawler()
         crawler.grab_tip(venue_id)
 
-#main()
 
 def instagram_test():
     add_table_venue_photo_instagram()
     crawler = VenuePhotoCrawlerInstagram()
     foursquare_ids = get_all_foursquare_ids()
-    fetched_ids = get_all_photo_fetched_venue_id_instagram()
+    #fetched_ids = get_all_photo_fetched_venue_id_instagram()
     for foursquare_id in foursquare_ids.keys():
-        if foursquare_id not in fetched_ids:
-            print foursquare_id, foursquare_ids[foursquare_id]
-            crawler.grab_photos(foursquare_id)
+        """NOTICE THIS IS TO AVOID REPEATING FETCHING"""
+        #if foursquare_id not in fetched_ids:
+        print foursquare_id, foursquare_ids[foursquare_id]
+        crawler.grab_photos(foursquare_id)
 #instagram_test()
 
 if __name__ == '__main__':
+    main()
     instagram_test()

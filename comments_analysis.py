@@ -24,6 +24,7 @@ def main():
     venues = {}
     cursor = connect_to_mysql()
     word_doc_freq = {}
+    global_word_freq = {}
     for id in foursquare_ids:
         sql = """select comments from venue_photo_instagram where comments is not NULL and foursquare_venue_id='"""+id + "'"
         venue_name = foursquare_ids[id]
@@ -37,6 +38,11 @@ def main():
             for sentence in comments:
                 words = tokenize(sentence[1])
                 for word in words:
+                    if word in global_word_freq:
+                        global_word_freq[word]+=1
+                    else:
+                        global_word_freq[word] = 1
+
                     if word in venues[venue_name]:
                         venues[venue_name][word] += 1
                     else:
@@ -48,16 +54,20 @@ def main():
                 word_doc_freq[w] = 1
         #comments.append( json.loads(r['comments']) )
         #print venues[venue_name]
-
+    too_common_word = set()
+    for word in sorted(global_word_freq.items(), key = lambda tup: tup[1], reverse=True)[:300]:
+        too_common_word.add(word[0])
+    #print too_common_word
     for venue_name in venues.keys():
         word_score = []
         words = venues[venue_name]
         for word in words:
             score = words[word]/(1+math.log(word_doc_freq[word]))
-            word_score.append( (word, score) )
+            if word not in too_common_word:
+                word_score.append( (word, score, words[word]) )
         
         print venue_name
-        print sorted(word_score, key=lambda tup: tup[1], reverse=True)[0:5]
+        print sorted(word_score, key=lambda tup: tup[1], reverse=True)[0:20]
 main() 
 
     
