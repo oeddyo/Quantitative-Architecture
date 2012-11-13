@@ -98,13 +98,16 @@ def save_photo_instagram(photos, foursquare_venue_id, instagram_venue_id, table)
             _likes_count = 0
         else:
             _likes_count = len(photo.likes)
+        caption = None
+        if 'caption' in dir(photo):
+            if 'text' in dir(photo.caption):
+                caption = photo.caption.text
         _link = photo.link
         _username = photo.user.username
         _profile_picture = photo.user.profile_picture
         _standard_resolution = photo.images['standard_resolution']
         _created_time = photo.created_time
-        #print _id, _filter, _tags, _comments, _likes_count, _link, _username, _profile_picture, _standard_resolution, _created_time
-        cursor.execute("REPLACE INTO "+table+" (foursquare_venue_id, instagram_venue_id, id, filter, tags, comments, likes_count, link, username, profile_picture, standard_resolution, created_time) values(%s" + ",%s"*11 + ")",(foursquare_venue_id,instagram_venue_id, _id, _filter, _tags, _comments, _likes_count, _link, _username, _profile_picture, _standard_resolution, _created_time) )
+        cursor.execute("REPLACE INTO "+table+" (foursquare_venue_id, instagram_venue_id, id, filter, tags, comments, likes_count, link, username, profile_picture, standard_resolution, created_time, caption) values(%s" + ",%s"*12 + ")",(foursquare_venue_id,instagram_venue_id, _id, _filter, _tags, _comments, _likes_count, _link, _username, _profile_picture, _standard_resolution, _created_time, caption) )
 
 
 def save_venue_stats(venue_dic, foursquare_id):

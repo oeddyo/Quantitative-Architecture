@@ -120,6 +120,7 @@ def add_table_venue_photo_instagram():
     profile_picture VARCHAR(500),
     standard_resolution VARCHAR(200),
     created_time DATETIME,
+    caption TEXT,
     PRIMARY KEY(id)
     ) ENGINE InnoDB DEFAULT CHARSET=utf8;
     """
