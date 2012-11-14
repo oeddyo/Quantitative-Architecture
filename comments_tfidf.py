@@ -15,8 +15,8 @@ class TFIDF():
         self.checker  = enchant.Dict("en_US") 
     def _word_filter(self, word, stopwords, global_word_freq):
         """default filter function"""
-        #if re.match("^[A-Za-z_]*$", word) and len(word)>=3 and word not in stopwords and global_word_freq[word] > 2 and global_word_freq[word]<500 and self.checker.check(word):  
-        if re.match("^[A-Za-z_]*$", word) and len(word)>=3 and word not in stopwords and global_word_freq[word] > 2  and self.checker.check(word):  
+        #if re.match("^[A-Za-z_]*$", word) and len(word)>=3 and word not in stopwords and global_word_freq[word] > 2 and global_word_freq[word]<500 and self.checker.check(word):  # english character? length? stopword? freq appear?
+        if re.match("^[A-Za-z_]*$", word) and len(word)>=3 and word not in stopwords and global_word_freq[word] > 2  and self.checker.check(word):  # english character? length? stopword? freq appear?
             return True
         return False
     
@@ -74,7 +74,7 @@ def main():
     names = []
     comments_count = []
     for id in foursquare_ids:
-        sql = """select caption from plazas_instaphoto where caption is not NULL and foursquare_venue_id='"""+id + "'"
+        sql = """select comments from plazas_instaphoto where comments is not NULL and foursquare_venue_id='"""+id + "'"
         venue_name = foursquare_ids[id]
         venues[venue_name] = {}
         
@@ -82,11 +82,11 @@ def main():
         res = cursor.fetchall()
         doc = ""
         for r in res:
-            comments = r['caption']
-            #comments = json.loads(r['caption'])
+            #comments = r['caption']
+            comments = json.loads(r['comments'])
             for sentence in comments:
-                #doc += sentence[1]
-                doc += sentence
+                doc += sentence[1]
+                #doc += sentence
         docs.append(doc)
         names.append( venue_name )
         comments_count.append( len(res) )
