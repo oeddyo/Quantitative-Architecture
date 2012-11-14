@@ -26,16 +26,16 @@ def main():
     word_doc_freq = {}
     global_word_freq = {}
     for id in foursquare_ids:
-        sql = """select comments from plazas_instaphoto where comments is not NULL and foursquare_venue_id='"""+id + "'"
+        sql = """select caption from plazas_instaphoto where caption is not NULL and foursquare_venue_id='"""+id + "'"
         venue_name = foursquare_ids[id]
         venues[venue_name] = {}
 
         cursor.execute(sql)
         res = cursor.fetchall()
         for r in res:
-            comments = json.loads(r['comments'])
+            comments = [r['caption']]
             for sentence in comments:
-                words = tokenize(sentence[1])
+                words = tokenize(sentence)
                 for word in words:
                     if word in global_word_freq:
                         global_word_freq[word]+=1
@@ -62,8 +62,8 @@ def main():
             if word not in too_common_word:
                 word_score.append( (word, score, words[word]) )
         
-        print venue_name
-        print sorted(word_score, key=lambda tup: tup[1], reverse=True)[0:20]
+        print venue_name.encode('utf-8','ignore')
+        print sorted(word_score, key=lambda tup: tup[1], reverse=True)[0:50]
 main() 
 
     

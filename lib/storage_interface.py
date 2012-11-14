@@ -123,7 +123,7 @@ def save_venue_stats(venue_dic, foursquare_id):
 
 def get_all_foursquare_ids():
     sql = """
-    select name,id from venue_meta
+    select distinct(foursquare_venue_id) as id, plazas_meta.name as name  from plazas_instaphoto, plazas_meta where plazas_instaphoto.foursquare_venue_id = plazas_meta.id
     """
     cursor = mysql_connect.connect_to_mysql()
     cursor.execute(sql)
